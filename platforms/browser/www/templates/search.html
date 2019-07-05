@@ -1,0 +1,24 @@
+<ion-view title="Buscar">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a class="button button-clear" href="#/app/basket"><i class="icon ion-ios-cart"><span class="badge badge-dark">{{cartItems}}</span></i></a>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header padding" >
+        <br>
+       <ion-text class="secondary"><h2>Buscar producto</h2></ion-text>
+       <div id="content" ng-controller="SearchCtrl">
+        <input style="width: 100%; padding: 5px 10px; margin-bottom: 15px; border: 2px solid #ffe278;
+    border-radius: 5px;" type='text' ng-model='searchText' placeholder="Buscador en tiempo real" />
+            <div class="list">
+                <a ng-repeat='producto in productos | filter:searchText' class="item item-avatar" ng-href="#/app/products/{{producto.id}}">
+                    <img src="{{producto.featured_src}}">
+                    <h2>{{producto.title}}</h2>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

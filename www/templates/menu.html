@@ -1,0 +1,38 @@
+<ion-side-menus>
+
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-ios-arrow-back"></i></i> Atrás</ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-pane>
+
+    <ion-side-menu side="left">
+        <header class="bar bar-header bar-stable">
+            <h1 class="title">Mi perfil</h1>
+        </header>
+        <ion-content class="has-header">
+            <div class="card" ng-if="user">
+                <div class="item item-avatar">
+                    <img ng-if="user.customer.avatar_url" src="{{user.customer.avatar_url}}" />
+                    <h2>{{user.customer.last_name}} {{user.customer.first_name}}</h2>
+                    <p><span ng-if="user.customer.username"><strong>({{user.customer.username}})</strong></span> Creada el {{user.customer.created_at | date: 'fullDate'}}</p>
+                </div>
+                <div class="item item-divider" ng-if="user.customer.last_order_date" ui-sref="app.orders({customer_id: user.customer.id})">
+                Último pedido (Fecha / Num. Pedidos)
+                </div>
+                <div class="item item-text-wrap" ng-if="user.customer.last_order_date">
+                {{user.customer.last_order_date | date: 'fullDate'}} <strong>({{user.customer.last_order_id}})</strong>
+                <button class="button button-block button-energized" ui-sref="app.orders({customer_id: user.customer.id})">
+                    Ver todos los pedidos
+                </button>
+                </div>
+            </div>
+            <ion-list>
+                <ion-item ng-repeat="item in items" nav-clear menu-close href="{{item.url}}">
+                    <i class="icon {{item.icon}}"></i> {{item.title}}
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

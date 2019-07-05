@@ -1,0 +1,21 @@
+<ion-view title="Metodos de pago">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a class="button button-clear" href="#/app/basket"><i class="icon ion-ios-cart"><span class="badge badge-dark">{{cartItems}}</span></i></a>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header padding">
+    	<input type="email" class="InputUsuario" ng-model="email.addr" ng-change="evaluateEmail()" ng-model-options="{debounce: 750}" readonly>
+    	<p>&nbsp;</p>
+    	<p>Por el momento, solamente manejamos pagos con Paypal. Estamos trabajando para que tengas mas opciones de pago.</p>
+    	<br>
+    	<br>
+		<a class="item item-icon-left" href="#">
+			<i class="icon ion-card"></i>
+		    Paypal
+		</a>
+    </ion-content>
+</ion-view>

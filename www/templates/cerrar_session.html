@@ -1,0 +1,16 @@
+<ion-view title="Cerrar Sesión">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a class="button button-clear" href="#/app/basket"><i class="icon ion-ios-cart"><span class="badge badge-dark">{{cartItems}}</span></i></a>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header padding">
+    	<h4>¿Desea cerrar sesión?</h4>
+    	<button ng-click="LogOut()" class="button button-assertive">
+		  Cerrar Sesión
+		</button>
+    </ion-content>
+</ion-view>

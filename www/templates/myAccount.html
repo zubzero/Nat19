@@ -1,0 +1,146 @@
+<ion-view title="Mi perfil">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a class="button button-clear" href="#/app/basket"><i class="icon ion-ios-cart"><span class="badge badge-dark">{{cartItems}}</span></i></a>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header padding" ng-controller="MyAccountCtrl">
+    	<p>&nbsp;</p>
+    		<h3>Hola, desde esta parte puedes editar los datos de tu cuenta.</h3>
+    	<p>&nbsp;</p>
+    	<div class="list">
+
+			<div class="item item-divider">
+			Información Personal
+			</div>
+
+			<label class="item item-input">
+			<span class="input-label">Email:</span>
+			<input type="email" name="email" ng-model="Micuenta.email" value="{{Micuenta.email}}" readonly>
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Nombre(s):</span>
+			<input type="text" name="first_name" ng-model="Micuenta.first_name" value="{{Micuenta.first_name}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Apellidos:</span>
+			<input type="text" name="last_name" ng-model="Micuenta.last_name" value="{{Micuenta.last_name}}">
+			</label>
+
+			<!-- <div class="item item-divider">
+			Direccion de facturación
+			</div>
+
+			<label class="item item-input">
+			<span class="input-label">Nombre(s):</span>
+			<input type="text" name="billing_address.first_name" ng-model="Micuenta.billing_address.first_name" value="{{Micuenta.billing_address.first_name}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Apellidos:</span>
+			<input type="text" name="billing_address.last_name" ng-model="Micuenta.billing_address.last_name" value="{{Micuenta.billing_address.last_name}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Empresa:</span>
+			<input type="text" name="billing_address.company" ng-model="Micuenta.billing_address.company" value="{{Micuenta.billing_address.company}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Dirección (1):</span>
+			<input type="text" name="billing_address.address_1" ng-model="Micuenta.billing_address.address_1" value="{{Micuenta.billing_address.address_1}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Dirección secundaria:</span>
+			<input type="text" name="billing_address.address_2" ng-model="Micuenta.billing_address.address_2" value="{{Micuenta.billing_address.address_2}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Ciudad:</span>
+			<input type="text" name="billing_address.city" ng-model="Micuenta.billing_address.city" value="{{Micuenta.billing_address.city}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Estado:</span>
+			<input type="text" name="billing_address.state" ng-model="Micuenta.billing_address.state" value="{{Micuenta.billing_address.state}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Codigo Postal:</span>
+			<input type="text" name="billing_address.postcode" ng-model="Micuenta.billing_address.postcode" value="{{Micuenta.billing_address.postcode}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Empresa:</span>
+			<input type="text" name="billing_address.country" ng-model="Micuenta.billing_address.country" value="México">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Email:</span>
+			<input type="text" name="billing_address.email" ng-model="Micuenta.billing_address.email" value="{{Micuenta.billing_address.email}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Teléfono:</span>
+			<input type="text" name="billing_address.phone" ng-model="Micuenta.billing_address.phone" value="{{Micuenta.billing_address.phone}}">
+			</label> -->
+
+
+			<div class="item item-divider">
+			Dirección de envio
+			</div>
+
+			<label class="item item-input">
+			<span class="input-label">Nombre(s):</span>
+			<input type="text" name="shipping_address.first_name" ng-model="Micuenta.shipping_address.first_name" value="{{Micuenta.shipping_address.first_name}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Apellidos:</span>
+			<input type="text" name="shipping_address.last_name" ng-model="Micuenta.shipping_address.last_name" value="{{Micuenta.shipping_address.last_name}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Empresa:</span>
+			<input type="text" name="shipping_address.company" ng-model="Micuenta.shipping_address.company" value="{{Micuenta.shipping_address.company}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Dirección (1):</span>
+			<input type="text" name="shipping_address.address_1" ng-model="Micuenta.shipping_address.address_1" value="{{Micuenta.shipping_address.address_1}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Dirección (2):</span>
+			<input type="text" name="shipping_address.address_2" ng-model="Micuenta.shipping_address.address_2" value="{{Micuenta.shipping_address.address_2}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Ciudad:</span>
+			<input type="text" name="shipping_address.city" ng-model="Micuenta.shipping_address.city" value="{{Micuenta.shipping_address.city}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Estado:</span>
+			<input type="text" name="shipping_address.state" ng-model="Micuenta.shipping_address.state" value="{{Micuenta.shipping_address.state}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">Codigo Postal:</span>
+			<input type="text" name="billing_address.postcode" ng-model="Micuenta.shipping_address.postcode" value="{{Micuenta.shipping_address.postcode}}">
+			</label>
+
+			<label class="item item-input">
+			<span class="input-label">País:</span>
+			<input type="text" name="shipping_address.country" ng-model="Micuenta.shipping_address.country" value="México">
+			</label>
+			<button class="button button-block button-energized" ng-click="Editar_usuario()">Acceder</button>
+		</div>
+    </ion-content>
+</ion-view>
