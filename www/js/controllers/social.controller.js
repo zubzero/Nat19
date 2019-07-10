@@ -18,9 +18,7 @@
     // Terminos y condiciones
     // Social Controller
     .controller('TerminosCtrl', function($scope, SocialData, $http, $ionicPopup, UserData, ProductsData, $state, BasketData, MetaData, CONFIG) {})
-    .controller('TarjetasCtrl', function($scope, SocialData, $http, $ionicPopup, UserData, ProductsData, $state, BasketData, MetaData, CONFIG) {
-
-    })
+    .controller('TarjetasCtrl', function($scope, SocialData, $http, $ionicPopup, UserData, ProductsData, $state, BasketData, MetaData, CONFIG) {})
     .controller('CerrarCtrl', function($scope, SocialData, $http, $ionicPopup, UserData, ProductsData, $state, BasketData, MetaData, CONFIG) {
       $scope.LogOut = function() {
         window.localStorage.clear();
@@ -70,7 +68,15 @@
     .controller('loginCtrl', function($scope, $http, $ionicPopup, UserData, $state, BasketData, MetaData, CONFIG, PAYMENT_CONFIG){
 
         $scope.acceso = function() {
-        var url = "https://naturapp.store/api/auth/generate_auth_cookie/?nonce=f4320f4a67&";
+          var randomString = function(length) {
+            var text = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            for(var i = 0; i < length; i++) {
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            }
+            return text;
+        };
+        var url = "https://naturapp.store/api/auth/generate_auth_cookie/?nonce="+randomString+"&";
         $.ajax({
             method: "POST",
             url: url,

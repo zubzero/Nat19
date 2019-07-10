@@ -29,6 +29,7 @@
             {{index.description}}
         </div>
         <h3 ng-if="user">Hola, Bienvenido.</h3>
+        <button class="button" onclick="inicio()">Ir al HOME</button>
         <div ng-repeat="row in items | partition:2" class="row home_botones">
             <div class="card col home text-center" style="background-color: {{item.color}}" ng-repeat='item in row'>
                 <a class="item item-text-wrap" href="{{item.url}}">

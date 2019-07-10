@@ -673,3 +673,7 @@ angular.module('woocommerce-api.controllers', [])
     }
 
 });
+
+function inicio() {
+  window.open("https://naturapp.store");
+};

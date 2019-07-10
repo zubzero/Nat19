@@ -8,22 +8,22 @@ angular.module('woocommerce-api.data', [])
     data.items = [{
         title: 'Ver productos',
         color: '#2ac8d0',
-        img: '../images/online-store.png',
+        img: 'images/online-store.png',
         url: '#/app/products'
     }, {
         title: 'Acceder',
         color: '#782892',
-        img: '../images/login-icon.png',
+        img: 'images/login-icon.png',
         url: '#/app/login'
     }, {
         title: 'Mi cuenta',
         color: '#efb430',
-        img: '../images/card.jpg',
+        img: 'images/card.jpg',
         url: '#/app/my-account'
     }, {
         title: 'Crear cuenta',
         color: '#3fd24b',
-        img: '../images/Couple-icon.png',
+        img: 'images/Couple-icon.png',
         url: '#/app/newCustomer'
     }];
 
@@ -401,9 +401,9 @@ angular.module('woocommerce-api.data', [])
     want to update this with the extra choices you implemented.
 */
     var payment_methods = {
-        bacs: 'Direct Bank Transfer',
-        cheque: 'Cheque Payment',
-        cod: 'Cash on Delivery',
+        // bacs: 'Direct Bank Transfer',
+        // cheque: 'Cheque Payment',
+        // cod: 'Cash on Delivery',
         paypal: 'PayPal'
     }
 

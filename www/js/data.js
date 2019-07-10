@@ -401,9 +401,9 @@ angular.module('woocommerce-api.data', [])
     want to update this with the extra choices you implemented.
 */
     var payment_methods = {
-        bacs: 'Direct Bank Transfer',
-        cheque: 'Cheque Payment',
-        cod: 'Cash on Delivery',
+        // bacs: 'Direct Bank Transfer',
+        // cheque: 'Cheque Payment',
+        // cod: 'Cash on Delivery',
         paypal: 'PayPal'
     }
 

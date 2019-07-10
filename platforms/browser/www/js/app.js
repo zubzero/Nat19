@@ -257,20 +257,20 @@ angular.module('woocommerce-api', ['ionic', 'woocommerce-api.controllers',
 
 // Validar Cookie
     
-    var cookie_user = sessionStorage.getItem("autosave");
-    // console.log(cookie_user);
-    var url2 = "https://naturapp.store/api/auth/";
-        $.ajax({
-            method: "GET",
-            url: url2+'validate_auth_cookie/?cookie='+cookie_user
-          }).done(function( respuesta ) {
-            // console.log(respuesta);
-          }).fail(function() {
-            // console.log('fallo la verificacion cookie'+respuesta);
-          });
-        $.ajax({
-                method: "GET",
-                url: url2+'get_currentuserinfo/?cookie='+cookie_user
-            }).done(function (infoUsuario){
-                console.log(infoUsuario);
-            });
+    // var cookie_user = sessionStorage.getItem("autosave");
+    // // console.log(cookie_user);
+    // var url2 = "https://naturapp.store/api/auth/";
+    //     $.ajax({
+    //         method: "GET",
+    //         url: url2+'validate_auth_cookie/?cookie='+cookie_user
+    //       }).done(function( respuesta ) {
+    //         // console.log(respuesta);
+    //       }).fail(function() {
+    //         // console.log('fallo la verificacion cookie'+respuesta);
+    //       });
+    //     $.ajax({
+    //             method: "GET",
+    //             url: url2+'get_currentuserinfo/?cookie='+cookie_user
+    //         }).done(function (infoUsuario){
+    //             console.log(infoUsuario);
+    //         });
