@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.naturapp.store" version="0.6.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>NATURAPP</name>
+<widget id="com.naturapp.store" version="0.6.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>NATURAPP -D</name>
   <description>Tienda de articulos organicos y veganos.
   </description>
   <content src="index.html"/>
