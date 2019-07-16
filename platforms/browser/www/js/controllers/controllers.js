@@ -675,5 +675,5 @@ angular.module('woocommerce-api.controllers', [])
 });
 
 function inicio() {
-  window.open("https://naturapp.store");
+  window.open("https://naturapp.store", "_self", 'location=no');
 };

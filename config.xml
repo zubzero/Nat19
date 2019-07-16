@@ -6,6 +6,7 @@
   <content src="index.html"/>
   <access origin="*" />
   <access origin="*://*.googleapis.com/*" subdomains="true" />
+  <access origin="https://*.naturapp.store/*" subdomains="true" />
   <access origin="*://*.publify.com.mx/*" subdomains="true" />
   <access origin="*://*.gstatic.com/*" subdomains="true" />
   <access origin="*://*.google.com/*" subdomains="true" />
