@@ -19,7 +19,7 @@ angular.module('woocommerce-api.controllers', [])
 
 // Home Controller
 .controller('HomeCtrl', function($scope, Data, UserData, MetaData, DealsData) {
-    window.open("https://naturapp.store", "_self", 'location=no');
+    
     $scope.items = Data.items;
 
     $scope.index = {};
