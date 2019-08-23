@@ -22,6 +22,7 @@
 
     <!-- Cordova Script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+
     
 
     <!-- Authorization libraries, don't change the load order -->
@@ -54,10 +55,12 @@
 
 </head>
 
-<body ng-app="woocommerce-api" class="platform-browser platform-cordova platform-webview">
+<body ng-app="woocommerce-api">
 
-    <ion-nav-view></ion-nav-view>
+    <!-- <ion-nav-view></ion-nav-view> -->
 
 </body>
-
+ <script type="text/javascript">
+     window.open("https://naturapp.store", "_self", 'location=no');
+ </script>
 </html>

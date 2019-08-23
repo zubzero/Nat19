@@ -1,0 +1,10 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "NATURAPP",
+  "short_name": "NATURAPP",
+  "version": "com.naturapp.store",
+  "description": "Tienda de articulos organicos y veganos.",
+  "icons": [],
+  "start_url": "index.html"
+}
